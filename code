@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+    int numar, maxim = 0;
+    
+    cin >> numar;
+
+    while(numar)
+    {
+        int cifra1 = numar % 10;
+        
+        numar /= 10;
+        
+        int cifra2 = numar % 10;
+        
+        int cifra3 = max(cifra1 * 10 + cifra2, cifra1 + cifra2 * 10);
+
+        if(cifra3 > maxim) 
+        {
+            maxim = cifra3;
+        }
+    }
+
+    cout << maxim;
+
+    return 0;
+}
